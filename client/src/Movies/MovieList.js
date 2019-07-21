@@ -20,7 +20,7 @@ const MovieList = props => {
   
   return (
     <div className="movie-list">
-      {this.state.movies.map(movie => (
+      {movies.map(movie => (
         <MovieDetails key={movie.id} movie={movie} />
       ))}
     </div>
@@ -49,4 +49,4 @@ function MovieDetails({ movie }) {
   );
 }
 
-export default MoviesList;
+export default MovieList;
