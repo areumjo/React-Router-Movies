@@ -21,10 +21,19 @@ const MovieList = props => {
   return (
     <div className="movie-list">
       {movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
-      ))}
+        <div onClick={ () => routeToMovie(props, movie)}>
+          <MovieDetails 
+          key={movie.id} 
+          movie={movie} 
+          />
+        </div>
+      ))}>
     </div>
   );
+}
+
+function routeToMovie(props, movie) {
+  props.history.push(`/movies/${movie.id}`);
 }
 
 function MovieDetails({ movie }) {

@@ -4,6 +4,7 @@ import axios from 'axios';
 const Movie = (props) => {
   
   const [movie, setMovie] = useState();
+  //const movieID = movie.find(ave => `${ave.id}` === props.match.params.id);
   
   useEffect(() => { 
     const id = props.match.params.id;
